@@ -2,13 +2,22 @@ import six
 import pytest
 from twisted.python import log
 
-collect_ignore = ["scrapy/stats.py", "scrapy/project.py"]
+collect_ignore = [
+    "scrapy/conf.py",
+    "scrapy/stats.py",
+    "scrapy/project.py",
+    "scrapy/contrib_exp/__init__.py",
+    "scrapy/contrib_exp/iterators.py",
+    "scrapy/contrib_exp/downloadermiddleware/__init__.py",
+    "scrapy/contrib_exp/downloadermiddleware/decompression.py",
+]
 
 if six.PY3:
     for line in open('tests/py3-ignores.txt'):
         file_path = line.strip()
         if len(file_path) > 0 and file_path[0] != '#':
             collect_ignore.append(file_path)
+
 
 class LogObservers:
     """Class for keeping track of log observers across test modules"""
