@@ -79,6 +79,12 @@ Instead, use the official :ref:`Ubuntu Packages <topics-ubuntu>`, which already
 solve all dependencies for you and are continuously updated with the latest bug
 fixes.
 
+Debian Jessie
+~~~~~~~~~~~~~
+
+Before running `pip install scrapy`, you must install libxslt1-dev, liblxml2-dev,
+libffi-dev and python-dev.
+
 Archlinux
 ~~~~~~~~~
 
